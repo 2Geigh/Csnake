@@ -1,0 +1,20 @@
+Draw the screen (20 width, 20 height)
+
+snake_tiles = [(10, 5)]
+Draw the snake
+
+fruit_position = random(but not in snake_tiles) 
+Draw the fruit
+
+LOOP:
+	Draw the screen
+
+	Draw the fruit(fruit_position)
+
+	Draw the snake
+	Draw its head one additional pixel in [direction]
+
+	If snake is not touching fruit:
+		Decrease tail length by 1
+	else:
+		fruit_position = Somewhere where there's no snake
