@@ -1,20 +1,42 @@
-Draw the screen (20 width, 20 height)
+#include <stdio.h>
+#include <bool.h>
 
-snake_tiles = [(10, 5)]
-Draw the snake
+int SCREEN_WIDTH = 30;
+int SCREEN_HEIGHT = 30;
 
-fruit_position = random(but not in snake_tiles) 
-Draw the fruit
+initialize_snake() {
+	int snake_velocity = [random number in [-1] and [-2], random number in [-1] and [-2]]
 
-LOOP:
-	Draw the screen
+	int snake_head_position = [floor(SCREEN_WIDTH/2), floor(SCREEN_HEIGHT/3)]
+	starting_tail_fragment_2 = [snake_head_position[0], (snake_head_position[1] - 1)]
+	starting_tail_fragment_3 = [starting_tail_fragment_2[0], starting_tail_fragment_2[1] - 1]
+	
+	snake_pixels[3] = [snake_head_position, ]
+}
 
-	Draw the fruit(fruit_position)
+calculate_snake_pixels()
 
-	Draw the snake
-	Draw its head one additional pixel in [direction]
+char BACKGROUND = ".";
 
-	If snake is not touching fruit:
-		Decrease tail length by 1
-	else:
-		fruit_position = Somewhere where there's no snake
+int main(void) {
+	bool running = true;
+
+	while(running) {
+		
+		Get_user_input()
+
+		recalculate_snake_pixels();
+
+		If (snake_will_hit_wall() || snake_will_eat_itself) {
+			break;
+		}
+
+		If snake_ate_fruit {
+			recalculate_fruit_pixels();
+		}
+
+		draw_screen(fruit_pixels, snake_pixels);
+	}
+
+	return 0;
+}
