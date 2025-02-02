@@ -10,7 +10,7 @@ struct Coordinate {
 	int y;
 };
 
-int SNAKE_STARTING_LENGTH = 3;
+#define SNAKE_STARTING_LENGTH 3
 
 struct Coordinate snake_pixels[SNAKE_STARTING_LENGTH];
 struct Coordinate snake_velocity;
@@ -55,5 +55,6 @@ int main(void) {
 	// 		draw_screen(fruit_pixels, snake_pixels);
 	// 	}
 
+	printf("Success!\n");
 	return 0;
 }
